@@ -11,16 +11,6 @@ arr =
 5 8 5 2 1
 */
 
-void cube(int lst[100], int arr[][100], int r, int c, int i){
-    for (;c <= c + 1; c++){
-        for (; r <= r + 1; r++){
-            arr[r][c] = lst[i];
-            i++;
-        }
-    }
-} 
-
-
 int main(){
     int col, row, lst[100], lst_len = 0, i = 0;
     
