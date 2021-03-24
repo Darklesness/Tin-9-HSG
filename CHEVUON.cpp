@@ -33,6 +33,13 @@ int main(){
         }
     }      
     cout << endl;
+    cout << "Mang vua nhap: " << endl;
+    for (int r = 0; r < row; r++){
+        for (int c = 0; c < col; c++){
+            cout << arr[r][c] << " ";
+        }
+        cout << endl;
+    }
 
     //Sắp xếp mảng 1 chiều
     i = 0;
@@ -67,16 +74,16 @@ int main(){
                 if (c <= c2){
                     while (true){
                         if (r <= r2){
-                            cout << "timeloop: " << timeloop << endl << "Timeloop_Check " << (int)(timeloop_check + 0.5) << endl;
-                            cout << "r = " << r << endl << "r2 = " << r2 << endl;
-                            cout << "c = " << c << endl << "c2 = " << c2 << endl;
-                            cout << "Arr[" << r << "][" << c << "] trc: " << arr[r][c] << endl;
-                            cout << "Lst[" << i << "] :"  << lst[i] << endl;   
+                            //cout << "timeloop: " << timeloop << endl << "Timeloop_Check " << (int)(timeloop_check + 0.5) << endl;
+                            //cout << "r = " << r << endl << "r2 = " << r2 << endl;
+                            //cout << "c = " << c << endl << "c2 = " << c2 << endl;
+                            //cout << "Arr[" << r << "][" << c << "] trc: " << arr[r][c] << endl;
+                            //cout << "Lst[" << i << "] :"  << lst[i] << endl;   
                             arr[r][c] = lst[i];
-                            cout << "Arr[" << r << "]["<< c << "] sau: " << arr[r][c] << endl << endl;
+                            //cout << "Arr[" << r << "]["<< c << "] sau: " << arr[r][c] << endl << endl;
                             i++;
                             r++;
-                            system("pause");
+                            //system("pause");
                         }
                         else{
                             r -= 2;
@@ -97,27 +104,27 @@ int main(){
         if ((row % 2) == 1 && (r == row - 1)){
             int c2 = c + 2;
             while (c < c2){
-                cout << "timeloop: " << timeloop << endl << "Timeloop_Check " << (int)(timeloop_check + 0.5) << endl;
-                cout << "c = " << c << endl << "c2 = " << c2 << endl;
-                cout << "Arr[" << r << "][" << c << "] trc: " << arr[r][c] << endl;
-                cout << "Lst[" << i << "] :"  << lst[i] << endl;
+                //cout << "timeloop: " << timeloop << endl << "Timeloop_Check " << (int)(timeloop_check + 0.5) << endl;
+                //cout << "c = " << c << endl << "c2 = " << c2 << endl;
+                //cout << "Arr[" << r << "][" << c << "] trc: " << arr[r][c] << endl;
+                //cout << "Lst[" << i << "] :"  << lst[i] << endl;
                 arr[r][c] = lst[i];
-                cout << "Arr[" << r << "]["<< c << "] sau: " << arr[r][c] << endl << endl;
-                system("pause");
+                //cout << "Arr[" << r << "]["<< c << "] sau: " << arr[r][c] << endl << endl;
+                //system("pause");
                 c++;
                 i++;    
             }
-            cout << "c = " << c << " " << "col - col % 2 = " << col - col % 2 << endl;
+            //cout << "c = " << c << " " << "col - col % 2 = " << col - col % 2 << endl;
             if (c == col - col % 2){
                 if (col % 2 == 1){
                     r = 0;
                     while (r < row){
-                        cout << "r = " << c << endl << "row - 1 = " << row - 1 << endl;
-                        cout << "Arr[" << r << "][" << c << "] trc: " << arr[r][c] << endl;
-                        cout << "Lst[" << i << "] :"  << lst[i] << endl;
+                        //cout << "r = " << c << endl << "row - 1 = " << row - 1 << endl;
+                        //cout << "Arr[" << r << "][" << c << "] trc: " << arr[r][c] << endl;
+                        //cout << "Lst[" << i << "] :"  << lst[i] << endl;
                         arr[r][c] = lst[i];
-                        cout << "Arr[" << r << "]["<< c << "] sau: " << arr[r][c] << endl << endl;
-                        system("pause");
+                        //cout << "Arr[" << r << "]["<< c << "] sau: " << arr[r][c] << endl << endl;
+                        //system("pause");
                         i++;
                         r++;
                     }
@@ -133,24 +140,19 @@ int main(){
             c += 2;
             time_r = 0;
             r = 0;
-            cout << "Time_c = " << time_c << endl << "col - (col % 2) - (col / 2) = " << col - (col % 2) - (col / 2) << endl;
+            //cout << "Time_c = " << time_c << endl << "col - (col % 2) - (col / 2) = " << col - (col % 2) - (col / 2) << endl;
             time_c++;
         }
     }
 
     //Tính chiều cao cây chống lọng và số cây chống lọng cần dùng
-    int rc;
-    if (row % 2 != 0) rc = row;
-    else if (col % 2 != 0) rc = col;
-    else if (col % 2 == row % 2) rc = row; 
     
-    int i = 0, j = 0;
-    while (i <= rc){
-        for (; i <= rc % 2; i++){
-        }
-    }
+
+
 
     //In mảng 2 chiều
+    cout << endl;
+    cout << "Mang sau sap xep: " << endl;
     for (int r = 0; r < row; r++){
         for (int c = 0; c < col; c++){
             cout << arr[r][c] << " ";
