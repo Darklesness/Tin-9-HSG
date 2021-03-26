@@ -51,7 +51,7 @@ int main(){
     i = 0;
     int timeloop_check = double(lst_len/4 + 0.5);
 
-    for (int timeloop = 1; timeloop < timeloop_check; timeloop++){
+    for (int timeloop = 1; timeloop <= timeloop_check; timeloop++){
         if (time_r < row - (row % 2) - 1){
             int  c2 = c + 1;
             while (true){
@@ -110,13 +110,7 @@ int main(){
         }
     }
 
-    //Tính chiều cao cây chống lọng và số miếng che cần
-    i = 0;
-    string chieucao;
-    while (i < lst_len - 4){
-        chieucao += (string)(lst[i] + 1);
-        i += 4;
-    }
+   
     
     //In mảng 2 chiều
     cout << endl;
@@ -127,7 +121,6 @@ int main(){
         }
         cout << endl;
     }
-    cout << "So cay chong long can dung: " << timeloop_check << endl << "Chieu cao cac cay: " << chieucao << endl;
     system("pause");
     return 0;
 }
