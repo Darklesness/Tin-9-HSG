@@ -2,15 +2,6 @@
 
 using namespace std;
 
-/*
-row = 3, col = 5, lst = [9,8,8,6,5,5,5,4,3,3,2,2,1,1,1]
-
-arr = 
-1 3 4 9 1
-8 2 6 5 3
-5 8 5 2 1
-*/
-
 int main(){
     int col, row, lst[100], i = 0;
     double  lst_len = 0;
@@ -55,12 +46,6 @@ int main(){
         i++;
     }
 
-/*
-    //In mảng 1 chiều
-    for (i = 0; i < lst_len; i++)
-    cout << lst[i] << " ";
-*/
-
     //Sắp xếp mảng 2 chiều
     int time_r = 0, time_c = 1, r = 0, c = 0;
     i = 0;
@@ -74,16 +59,9 @@ int main(){
                 if (c <= c2){
                     while (true){
                         if (r <= r2){
-                            //cout << "timeloop: " << timeloop << endl << "Timeloop_Check " << (int)(timeloop_check + 0.5) << endl;
-                            //cout << "r = " << r << endl << "r2 = " << r2 << endl;
-                            //cout << "c = " << c << endl << "c2 = " << c2 << endl;
-                            //cout << "Arr[" << r << "][" << c << "] trc: " << arr[r][c] << endl;
-                            //cout << "Lst[" << i << "] :"  << lst[i] << endl;   
                             arr[r][c] = lst[i];
-                            //cout << "Arr[" << r << "]["<< c << "] sau: " << arr[r][c] << endl << endl;
                             i++;
                             r++;
-                            //system("pause");
                         }
                         else{
                             r -= 2;
@@ -104,27 +82,15 @@ int main(){
         if ((row % 2) == 1 && (r == row - 1)){
             int c2 = c + 2;
             while (c < c2){
-                //cout << "timeloop: " << timeloop << endl << "Timeloop_Check " << (int)(timeloop_check + 0.5) << endl;
-                //cout << "c = " << c << endl << "c2 = " << c2 << endl;
-                //cout << "Arr[" << r << "][" << c << "] trc: " << arr[r][c] << endl;
-                //cout << "Lst[" << i << "] :"  << lst[i] << endl;
                 arr[r][c] = lst[i];
-                //cout << "Arr[" << r << "]["<< c << "] sau: " << arr[r][c] << endl << endl;
-                //system("pause");
                 c++;
                 i++;    
             }
-            //cout << "c = " << c << " " << "col - col % 2 = " << col - col % 2 << endl;
             if (c == col - col % 2){
                 if (col % 2 == 1){
                     r = 0;
                     while (r < row){
-                        //cout << "r = " << c << endl << "row - 1 = " << row - 1 << endl;
-                        //cout << "Arr[" << r << "][" << c << "] trc: " << arr[r][c] << endl;
-                        //cout << "Lst[" << i << "] :"  << lst[i] << endl;
                         arr[r][c] = lst[i];
-                        //cout << "Arr[" << r << "]["<< c << "] sau: " << arr[r][c] << endl << endl;
-                        //system("pause");
                         i++;
                         r++;
                     }
@@ -140,16 +106,18 @@ int main(){
             c += 2;
             time_r = 0;
             r = 0;
-            //cout << "Time_c = " << time_c << endl << "col - (col % 2) - (col / 2) = " << col - (col % 2) - (col / 2) << endl;
             time_c++;
         }
     }
 
-    //Tính chiều cao cây chống lọng và số cây chống lọng cần dùng
+    //Tính chiều cao cây chống lọng và số miếng che cần
+    i = 0;
+    string chieucao;
+    while (i < lst_len - 4){
+        chieucao += (string)(lst[i] + 1);
+        i += 4;
+    }
     
-
-
-
     //In mảng 2 chiều
     cout << endl;
     cout << "Mang sau sap xep: " << endl;
@@ -159,6 +127,7 @@ int main(){
         }
         cout << endl;
     }
+    cout << "So cay chong long can dung: " << timeloop_check << endl << "Chieu cao cac cay: " << chieucao << endl;
     system("pause");
     return 0;
 }
