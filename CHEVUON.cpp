@@ -47,6 +47,14 @@ int main(){
     }
 
     //Sắp xếp mảng 2 chiều
+    i = 0;
+    if (col == 1){
+        for (int r = 0; r < row; r++){
+            arr[r][0] = lst[i];
+            i++;
+        }
+    }
+    else{
     int time_r = 0, time_c = 1, r = 0, c = 0;
     i = 0;
     int timeloop_check = double(lst_len/4 + 0.5);
@@ -109,7 +117,7 @@ int main(){
             time_c++;
         }
     }
-
+    }
    
     
     //In mảng 2 chiều
