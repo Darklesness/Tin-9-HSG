@@ -22,6 +22,7 @@ int main(){
             i++;
             lst_len++;
         }
+        cout << endl;
     }      
     cout << endl;
     cout << "Mang vua nhap: " << endl;
