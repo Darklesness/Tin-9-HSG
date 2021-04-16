@@ -5,14 +5,21 @@ using namespace std;
 int main(){
     int col, row, lst[100], i = 0;
     double  lst_len = 0;
-    
+    int** arr;
+
     //Nhập số dòng và cột
     cout << "Nhap so dong: ";
     cin >> row;
     cout << "Nhap so cot: ";
     cin >> col;
     
-    int arr[row][col];
+    arr = new int*[row];
+
+    for (int i = 0; i < row; i++)
+        arr[i] = new int[col];
+
+
+
 
     //Nhập các phần tử vào mảng 2 chiều và cả 1 chiều
     for (int r = 0; r < row; r++){
@@ -131,6 +138,7 @@ int main(){
         cout << endl;
     }
     system("pause");
+    delete[] arr;
     return 0;
 }
 
